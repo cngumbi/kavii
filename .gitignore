@@ -1,0 +1,6 @@
+#to manage the files 
+node_modules/
+
+package-lock.json
+
+index.html

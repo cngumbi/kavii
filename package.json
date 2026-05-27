@@ -1,0 +1,28 @@
+{
+  "name": "ncw-library",
+  "version": "1.0.0",
+  "description": "css library",
+  "keywords": [
+    "css"
+  ],
+  "homepage": "https://github.com/cngumbi/kavii#readme",
+  "bugs": {
+    "url": "https://github.com/cngumbi/kavii/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cngumbi/kavii.git"
+  },
+  "license": "ISC",
+  "author": "Wambua Ngumbi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.100.0"
+  }
+}
