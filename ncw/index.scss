@@ -1,14 +1,14 @@
-//variables and functions
-@use 'variables' as *;
-
+//variables and functions are to be inported in the file that use them
+//the rest are combined here in the main scss file
+//......................................................................
 //base and layout
 @use 'base';
-
 //colors
-
+@use 'colors';
 
 
 //compnents(button, card, navbar, etc)
+@use 'components/card';
 
 
 
