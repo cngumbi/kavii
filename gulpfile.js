@@ -23,7 +23,7 @@ const sass = require('gulp-sass')(require('sass'));
 function build() {
     return src('ncw/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(dest('css'))
+        .pipe(dest('/css'))
 }
 
 function liveTask() {
