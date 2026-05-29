@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'sass:color' as *;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: $base_margin 0;
+
+    th, td {
+        padding: $base_padding;
+        border-bottom: $base_border_thickness solid mix(black, white, 80%);
+        text-align: left;
+        vertical-align: top;
+    }
+
+    th {
+        background-color: mix(white, $primary, 88%);
+        font-weight: 700;
+    }
+}
+
+.table-striped {
+    tbody tr:nth-child(even) {
+        background-color: mix(white, $primary, 95%);
+    }
+}
+
+.table-bordered {
+    border: $base_border_thickness solid mix(black, white, 80%);
+
+    th, td {
+        border: $base_border_thickness solid mix(black, white, 80%);
+    }
+}
+
+.table-hover {
+    tbody tr:hover {
+        background-color: mix(white, $primary, 90%);
+    }
+}

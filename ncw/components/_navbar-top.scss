@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+.navbar-top {
+  width: 100%;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7ef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem 0 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  box-sizing: border-box;
+}
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #232946;
+}
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

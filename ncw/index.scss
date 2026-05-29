@@ -8,8 +8,15 @@
 @use 'colors';
 //compnents(button, card, navbar, etc)
 @use 'components/card';
+@use 'components/alert';
+@use 'components/form';
+@use 'components/table';
 @use 'components/button';
 @use 'components/navbar';
 @use 'components/badge';
+@use 'components/sidebar';
+@use 'components/navbar-top';
+@use 'components/dropdown';
+@use 'dashboard-system';
 //utilities(margin, padding, opacity)
 @use 'utilities';
