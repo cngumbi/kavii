@@ -13,6 +13,15 @@
   flex-direction: column;
   box-shadow: 2px 0 8px rgba(0,0,0,0.04);
 }
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
+}
+
 .sidebar-logo {
   font-size: 1.5rem;
   font-weight: bold;

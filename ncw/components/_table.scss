@@ -19,6 +19,14 @@
     }
 }
 
+@media (max-width: 900px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
 .table-striped {
     tbody tr:nth-child(even) {
         background-color: mix(white, $primary, 95%);
