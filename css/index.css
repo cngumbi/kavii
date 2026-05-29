@@ -5236,10 +5236,52 @@ body[data-theme=dark] {
   box-shadow: 0 4px 12px rgba(35, 41, 70, 0.08);
 }
 
+.pos-product-chip-selected {
+  border-color: #c7caff;
+  background: linear-gradient(180deg, #fff, #f4f4ff);
+}
+
 .pos-product-chip strong {
   display: block;
   margin-top: 0.2rem;
   font-size: 1.02rem;
+}
+
+.pos-entry-overview {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+
+.pos-entry-stat {
+  border-radius: 14px;
+  border: 1px solid #e5e7ef;
+  background: linear-gradient(180deg, #fff, #f9fafc);
+  padding: 0.8rem 0.9rem;
+}
+
+.pos-entry-stat-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pos-entry-stat-value {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.pos-entry-stat-trend {
+  display: block;
+  margin-top: 0.18rem;
+  font-size: 0.68rem;
+  color: #16a34a;
+  font-weight: 700;
 }
 
 .pos-cart-summary {
@@ -5251,6 +5293,44 @@ body[data-theme=dark] {
   background: linear-gradient(180deg, #1f294a, #32406f);
   color: #fff;
   padding: 1rem 1.1rem;
+}
+
+.pos-cart-table-wrap {
+  overflow-x: auto;
+}
+
+.pos-payment-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-bottom: 0.65rem;
+}
+
+.pos-drawer-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.pos-drawer-stat {
+  border-radius: 14px;
+  border: 1px solid #e5e7ef;
+  background: #fff;
+  padding: 0.8rem 0.9rem;
+}
+
+.pos-drawer-label {
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.pos-drawer-value {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--text);
 }
 
 .pos-amount-highlight {
@@ -6218,6 +6298,7 @@ body[data-theme=dark] {
   .sales-reports-hero {
     flex-direction: column;
   }
+  .pos-shell,
   .cash-bank-layout,
   .parties-layout,
   .add-party-layout,
