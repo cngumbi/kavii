@@ -1,9 +1,9 @@
 //variables
 // Theme color
-$primary: #326dee;
-$secondary: #1ac886;
-$error: #d32752;
-$info: #f6c31c;
+$primary: #326dee !default;
+$secondary: #1ac886 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
 
 //color palette
 $colors: (
@@ -24,19 +24,19 @@ $colors: (
 );
 
 //spacing
-$base_padding: 0.75rem;
-$base_margin: 0.75rem;
+$base_padding: 0.75rem !default;
+$base_margin: 0.75rem !default;
 
 //borders
-$base_border_thickness: 1px;
-$base_border_radius: 20px;
+$base_border_thickness: 1px !default;
+$base_border_radius: 20px !default;
 
 //box-shadow
-$base_box_shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+$base_box_shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
 
 //font size
-$base_font_size: 1rem;
-$font_size_sm: $base_font_size * 0.75;
-$font_size_lg: $base_font_size * 1.5;
-$font_size_xl: $base_font_size * 2;
-$font_size_xxl: $base_font_size * 3;
+$base_font_size: 1rem !default;
+$font_size_sm: $base_font_size * 0.75 !default;
+$font_size_lg: $base_font_size * 1.5 !default;
+$font_size_xl: $base_font_size * 2 !default;
+$font_size_xxl: $base_font_size * 3 !default;
