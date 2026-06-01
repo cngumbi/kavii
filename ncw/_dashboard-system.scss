@@ -1,3 +1,30 @@
+/*
+  Dashboard system styles
+
+  Overview & purpose:
+  - This partial contains layout, component, and utility styles used across the
+    admin dashboard pages. It implements a mobile-first approach where small
+    screen styles are the default and larger-screen enhancements are applied
+    through breakpoints.
+
+  Key concepts used in this file:
+  - Mobile-first: write base (narrow viewport) rules first, then add
+    breakpoint-specific overrides (using the project's breakpoint mixins).
+  - `min-width` breakpoints: styles within media queries apply from the
+    breakpoint up (desktop enhancements).
+  - Fluid grid and card patterns: use `auto-fit`/`minmax()` and `flex` to
+    create responsive cards that collapse naturally on small screens.
+  - Sidebar behavior: Sidebar is hidden off-canvas by default on small
+    screens and visible on larger screens. The `body.sidebar-collapsed`
+    class and the header toggle control visibility for smaller devices.
+
+  Maintainability tips:
+  - Keep component-specific overrides near the component rules here.
+  - Avoid using fixed widths; prefer `min-width: 0` on flex/grid children to
+    prevent overflow due to unbreakable content.
+  - For wide tables or data-grids, wrap them with `.table-wrapper` and use
+    `overflow-x: auto` to allow horizontal scrolling instead of breaking layout.
+*/
 @use 'variables' as *;
 
 body {
@@ -33,11 +60,34 @@ body[data-theme="dark"] {
   --card-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
 }
 
+/* Mobile-first layout: sidebar hidden by default on small screens */
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background: var(--sidebar);
+  color: #fff;
+  padding-top: 1.25rem;
+  transform: translateX(-100%);
+  transition: transform 240ms ease;
+  z-index: 50;
+}
+
 .main-content {
-  margin-left: 220px;
-  padding: 84px 2rem 2rem;
+  margin-left: 0;
+  padding: 1rem 1rem 2rem;
   min-height: 100vh;
   box-sizing: border-box;
+  width: 100%;
+}
+
+/* Large screens: show sidebar and offset main content */
+@media (min-width: 900px) {
+  .sidebar{ transform: translateX(0); }
+  .main-content { margin-left: 220px; padding: 84px 2rem 2rem; }
+  body.sidebar-collapsed .sidebar{ transform: translateX(-260px); visibility:visible }
 }
 
 .page-header {

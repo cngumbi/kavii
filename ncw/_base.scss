@@ -1,3 +1,18 @@
+/*
+    Base styles
+
+    Purpose:
+    - Provide global resets and baseline utilities used across the project.
+    - Establish safe defaults: font-family, image max-width, lists, and anchors.
+    - Apply `box-sizing: border-box` so width calculations are predictable and
+        to minimize layout overflow issues caused by padding/border additions.
+
+    Notes for maintainers:
+    - This file is intentionally minimal; component-level layout rules live under
+        other partials (e.g., `_dashboard-system.scss`, `_grid.scss`, etc.).
+    - Keep this file build-safe: avoid large layout rules here so mobile-first
+        overrides can be applied in component files.
+*/
 //google fonts
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -8,8 +23,12 @@
     color: inherit;
     margin: 0;
 }
+/* Use border-box to avoid width calculation overflow issues */
+* { box-sizing: border-box; }
 body{
     font-family: Poppins;
+    /* Prevent page-level horizontal scroll; table wrappers use overflow-x:auto */
+    overflow-x: hidden;
 }
 ul{
     padding: 0;

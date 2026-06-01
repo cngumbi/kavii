@@ -1,3 +1,15 @@
+/*
+    Design variables
+
+    Purpose:
+    - Central place for colors, spacing, radii, shadows, and typographic scales.
+    - Use `$colors` map and single-value tokens so components can remain generic
+        and easy to theme.
+
+    Guidelines:
+    - Prefer using variables instead of literal values in component styles.
+    - Keep scale values conservative; change here to propagate globally.
+*/
 //variables
 // Theme color
 $primary: #326dee !default;

@@ -1,3 +1,16 @@
+/*
+    Breakpoint utilities (mobile-first)
+
+    Purpose:
+    - Define the project's responsive breakpoints and provide convenient mixins
+        for writing media queries in a readable, consistent way.
+
+    Usage:
+    - Use the provided mixins (e.g., `@include sm { ... }`) to scope styles
+        that should apply from the named breakpoint upward (min-width).
+    - The mixins are mobile-first: write base (small-screen) styles outside the
+        mixin and add enhancements inside the mixin for larger viewports.
+*/
 @use 'sass:map';
 $breakpoints:(
     "xs": 0,
