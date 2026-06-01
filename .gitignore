@@ -7,3 +7,4 @@ package-lock.json
 index.html
 .agent.md
 index.css.map
+*.txt

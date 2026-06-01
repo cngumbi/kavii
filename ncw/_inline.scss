@@ -1,0 +1,61 @@
+/*
+  Inline styles moved here from HTML files
+
+  This file collects small layout overrides and UI utilities that were
+  previously embedded directly in page <style> blocks. Keeping them here
+  centralizes layout logic and ensures the styles are part of the compiled
+  CSS pipeline.
+
+  Each rule below is commented to explain intent and the reason it exists.
+*/
+
+/*
+  Sidebar toggle button styles
+  - visually lightweight button placed in the header that toggles the
+    sidebar visibility on small screens.
+*/
+.sidebar-toggle {
+  /* no background so it sits visually with the header */
+  background: none;
+  /* remove default button border to make it icon-like */
+  border: 0;
+  /* inherit color so it adapts to theme */
+  color: inherit;
+  /* slightly larger font size for tappable target */
+  font-size: 1.15rem;
+  /* pointer cursor to indicate interactivity */
+  cursor: pointer;
+  /* small spacing to the right so it doesn't touch the title */
+  margin-right: 0.5rem;
+}
+
+/*
+  Collapsed sidebar state
+  - When `body.sidebar-collapsed` is present, hide the off-canvas sidebar
+    by translating it left. We keep `visibility: hidden` for stricter
+    hiding on some older browsers, but rely primarily on transform for
+    GPU-accelerated transitions.
+*/
+body.sidebar-collapsed .sidebar {
+  transform: translateX(-260px);
+  visibility: hidden;
+}
+
+/*
+  Collapsed main-content adjustment
+  - When the sidebar is collapsed on wide screens, ensure the main content
+    fills the available width by removing the left margin offset.
+*/
+body.sidebar-collapsed .main-content {
+  margin-left: 0;
+}
+
+/*
+  Accessibility: ensure focus outlines remain visible for keyboard users
+  when the toggle button is focused. This duplicates browser defaults but
+  allows us to customize colour or thickness here if needed.
+*/
+.sidebar-toggle:focus {
+  outline: 2px solid rgba(99,102,241,0.12);
+  outline-offset: 2px;
+}
