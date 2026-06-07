@@ -9,7 +9,6 @@ function build() {
         .pipe(purgecss({ content: ['*.html']}))
         .pipe(dest('css'))
 }
-
 function liveTask() {
     watch(['ncw/**/*.scss', '*.html'], build)
 }
