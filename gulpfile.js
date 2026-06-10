@@ -12,7 +12,6 @@ function build() {
 function liveTask() {
     watch(['ncw/**/*.scss', '*.html'], build)
 }
-
 exports.default = series(build, liveTask)
 
 //development
