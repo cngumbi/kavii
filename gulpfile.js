@@ -13,7 +13,6 @@ function liveTask() {
     watch(['ncw/**/*.scss', '*.html'], build)
 }
 exports.default = series(build, liveTask)
-
 //development
 //const { src, dest, watch, series } = require('gulp');
 //const sass = require('gulp-sass')(require('sass'));
